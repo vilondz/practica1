@@ -9,8 +9,8 @@ Tape::Tape(){
   }
   for(int i = 0; i < sizex_; i++){
     for(int j = 0; j < sizey_; j++){
-      std::cout << "el bucle funciona" << std::endl;
-      std::cout << i  << " " << j << std::endl;
+     // std::cout << "el bucle funciona" << std::endl;
+     // std::cout << i  << " " << j << std::endl;
       cinta_[i][j] = false;
     }
   }
