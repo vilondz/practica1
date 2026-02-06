@@ -1,17 +1,20 @@
 #include <string>
 #include <vector>
-typedef bool celda;
+typedef char celda;
 typedef std::vector<celda> fila_de_celdas ;
 typedef std::vector<fila_de_celdas> Cinta;
 class Tape {
   private:
-    int sizex_;
-    int sizey_;
+    int size_x_;
+    int size_y_;
     Cinta cinta_;
   public:
-    Tape();
-    Tape(std::string fichero);
+    Tape(int = 10, int = 10);
+    Tape(int x, int y, std::vector<std::pair<int, int>> negras);
+
     bool get_color(int& x, int& y);
+
     void change_color(int& x, int& y);
-    std::ostream& drow_tape(std::ostream& out);
+
+    std::ostream& draw_tape(std::ostream& out);
 };
